@@ -11,7 +11,7 @@ import MapKit
 import Alamofire
 
 class Weather {
-    
+    var someChange = "Whatever"
     
     private var _weather : String!
     var weather : String {

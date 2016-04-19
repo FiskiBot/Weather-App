@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		755CA4CA1CC5AC6E00D7A0D7 /* metalGear.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 755CA4C91CC5AC6E00D7A0D7 /* metalGear.ttf */; };
+		755CA4D01CC5B64D00D7A0D7 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CA4CF1CC5B64D00D7A0D7 /* Weather.swift */; };
+		755CA4D31CC695C100D7A0D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755CA4D21CC695C100D7A0D7 /* Constants.swift */; };
 		75D9A70E1CC59D2E00B120F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A70D1CC59D2E00B120F4 /* AppDelegate.swift */; };
-		75D9A7101CC59D2E00B120F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A70F1CC59D2E00B120F4 /* ViewController.swift */; };
+		75D9A7101CC59D2E00B120F4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D9A70F1CC59D2E00B120F4 /* MainVC.swift */; };
 		75D9A7131CC59D2E00B120F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D9A7111CC59D2E00B120F4 /* Main.storyboard */; };
 		75D9A7151CC59D2E00B120F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D9A7141CC59D2E00B120F4 /* Assets.xcassets */; };
 		75D9A7181CC59D2E00B120F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D9A7161CC59D2E00B120F4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		755CA4C91CC5AC6E00D7A0D7 /* metalGear.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = metalGear.ttf; sourceTree = "<group>"; };
+		755CA4CF1CC5B64D00D7A0D7 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		755CA4D21CC695C100D7A0D7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75D9A70A1CC59D2E00B120F4 /* WeatherOrNot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherOrNot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D9A70D1CC59D2E00B120F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75D9A70F1CC59D2E00B120F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75D9A70F1CC59D2E00B120F4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		75D9A7121CC59D2E00B120F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75D9A7141CC59D2E00B120F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75D9A7171CC59D2E00B120F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +41,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		755CA4CB1CC5AC7200D7A0D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				755CA4C91CC5AC6E00D7A0D7 /* metalGear.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		755CA4CC1CC5B59500D7A0D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		755CA4CD1CC5B5F000D7A0D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				755CA4CF1CC5B64D00D7A0D7 /* Weather.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		755CA4CE1CC5B60D00D7A0D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				75D9A70F1CC59D2E00B120F4 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		755CA4D11CC695AC00D7A0D7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				755CA4D21CC695C100D7A0D7 /* Constants.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		75D9A7011CC59D2E00B120F4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +99,12 @@
 		75D9A70C1CC59D2E00B120F4 /* WeatherOrNot */ = {
 			isa = PBXGroup;
 			children = (
+				755CA4D11CC695AC00D7A0D7 /* Utilities */,
+				755CA4CD1CC5B5F000D7A0D7 /* Model */,
+				755CA4CC1CC5B59500D7A0D7 /* View */,
+				755CA4CE1CC5B60D00D7A0D7 /* Controller */,
+				755CA4CB1CC5AC7200D7A0D7 /* Resources */,
 				75D9A70D1CC59D2E00B120F4 /* AppDelegate.swift */,
-				75D9A70F1CC59D2E00B120F4 /* ViewController.swift */,
 				75D9A7111CC59D2E00B120F4 /* Main.storyboard */,
 				75D9A7141CC59D2E00B120F4 /* Assets.xcassets */,
 				75D9A7161CC59D2E00B120F4 /* LaunchScreen.storyboard */,
@@ -124,6 +173,7 @@
 			files = (
 				75D9A7181CC59D2E00B120F4 /* LaunchScreen.storyboard in Resources */,
 				75D9A7151CC59D2E00B120F4 /* Assets.xcassets in Resources */,
+				755CA4CA1CC5AC6E00D7A0D7 /* metalGear.ttf in Resources */,
 				75D9A7131CC59D2E00B120F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D9A7101CC59D2E00B120F4 /* ViewController.swift in Sources */,
+				75D9A7101CC59D2E00B120F4 /* MainVC.swift in Sources */,
+				755CA4D01CC5B64D00D7A0D7 /* Weather.swift in Sources */,
 				75D9A70E1CC59D2E00B120F4 /* AppDelegate.swift in Sources */,
+				755CA4D31CC695C100D7A0D7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +340,7 @@
 				75D9A71E1CC59D2E00B120F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

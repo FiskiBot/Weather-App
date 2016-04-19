@@ -17,14 +17,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var fahrLbl: UILabel!
     
     let locationManager = CLLocationManager()
+    
     var weather : Weather!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
     override func viewDidAppear(animated: Bool) {
         locationAuthStatus()
     }
@@ -34,6 +28,11 @@ class MainVC: UIViewController {
         } else {
             locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
 
 }

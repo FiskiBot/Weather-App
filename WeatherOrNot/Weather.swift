@@ -7,9 +7,11 @@
 //
 
 import Foundation
-
+import MapKit
+import Alamofire
 
 class Weather {
+    
     
     private var _weather : String!
     var weather : String {
@@ -42,7 +44,10 @@ class Weather {
         _weatherURL = "\(BASE_URL)\(API_KEY)\(_location)"
     }
     
+    
     func downloadWeatherDetails (completed: DownloadComplete) {
+        
+        let url = NSURL(string: _weatherURL)!
         
     }
 }

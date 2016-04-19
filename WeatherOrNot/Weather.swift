@@ -12,7 +12,6 @@ import Alamofire
 
 class Weather {
     
-    
     private var _weather : String!
     var weather : String {
         if _weather == nil{

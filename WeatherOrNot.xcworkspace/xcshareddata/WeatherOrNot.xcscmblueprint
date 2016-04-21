@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "193BD20CFB8771A5E84630968C875598B791C486",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "193BD20CFB8771A5E84630968C875598B791C486" : 0,
+    "5BB515290C02D3DB74412DD00A369737FB606D41" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "75C50B98-4D2E-4586-AFD7-96339CF325CF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "193BD20CFB8771A5E84630968C875598B791C486" : "WeatherOrNot\/",
+    "5BB515290C02D3DB74412DD00A369737FB606D41" : "WeatherOrNot\/WeatherOrNot\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WeatherOrNot",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WeatherOrNot.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/FiskiBot\/WeatherOrNot.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "193BD20CFB8771A5E84630968C875598B791C486"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:FiskiBot\/WeatherOrNot.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5BB515290C02D3DB74412DD00A369737FB606D41"
+    }
+  ]
+}

@@ -7,10 +7,14 @@
 //
 
 import Foundation
-import MapKit
 import Alamofire
+import CoreLocation
 
 class Weather {
+    
+    //Some comment
+   
+    
     
     private var _weather : String!
     var weather : String {
@@ -20,12 +24,20 @@ class Weather {
         return _weather
     }
     
-    private var _location : String!
-    var location : String {
-        if _location == nil {
-            _location = ""
+    private var _latitude : Float!
+    var location : Float{
+        if _latitude == nil {
+            _latitude = 47.621344
         }
-        return _location
+        return _latitude
+    }
+    
+    private var _longitude : Float!
+    var longitude : Float {
+        if _longitude == nil {
+            _longitude = -122.361176
+        }
+        return _longitude
     }
     
     private var _weatherURL : String!
@@ -36,17 +48,21 @@ class Weather {
         return _weatherURL
     }
     
-    init (weather: String, location: String) {
+    init (weather: String) {
         self._weather = weather
-        self._location = location
-        
-        _weatherURL = "\(BASE_URL)\(API_KEY)\(_location)"
+        //self._latitude = latitude
+        //self._longitude = longitude
+        //_weatherURL = "\(BASE_URL)\(API_KEY)\(self._latitude),\(self._longitude)"
+        _weatherURL = "\(BASE_URL)\(API_KEY)47.621344,-122.361176"
     }
     
     
     func downloadWeatherDetails (completed: DownloadComplete) {
         
         let url = NSURL(string: _weatherURL)!
-        
+        Alamofire.request(.GET, url).responseJSON { response in
+            let result = response.result
+            print(result.value.debugDescription)
+        }
     }
 }

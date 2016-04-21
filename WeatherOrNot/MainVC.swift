@@ -7,32 +7,26 @@
 //
 
 import UIKit
-import MapKit
+
 
 class MainVC: UIViewController {
+
     @IBOutlet weak var weatherImg: UIImageView!
 
     @IBOutlet weak var locationLbl: UILabel!
     @IBOutlet weak var celcLbl: UILabel!
     @IBOutlet weak var fahrLbl: UILabel!
     
-    let locationManager = CLLocationManager()
-    
     var weather : Weather!
-    override func viewDidAppear(animated: Bool) {
-        locationAuthStatus()
-    }
     
-    func locationAuthStatus(){
-        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
-        } else {
-            locationManager.requestWhenInUseAuthorization()
+    override func viewDidAppear(animated: Bool) {
+        
+        weather.downloadWeatherDetails { () -> () in
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
 }

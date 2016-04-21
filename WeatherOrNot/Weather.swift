@@ -8,34 +8,37 @@
 
 import Foundation
 import Alamofire
-import CoreLocation
 
 class Weather {
     
-    //Some comment
-   
-    
-    
-    private var _weather : String!
-    var weather : String {
-        if _weather == nil{
-            _weather = ""
+    private var _icon : String!
+    var icon : String {
+        if _icon == nil{
+            _icon = ""
         }
-        return _weather
+        return _icon
     }
     
-    private var _latitude : Float!
-    var location : Float{
+    private var _temp : String!
+    var temp : String {
+        if _temp == nil {
+            _temp = ""
+        }
+        return _temp
+    }
+    
+    private var _latitude : String!
+    var latitude : String {
         if _latitude == nil {
-            _latitude = 47.621344
+            _latitude = "47.620187"
         }
         return _latitude
     }
     
-    private var _longitude : Float!
-    var longitude : Float {
+    private var _longitude : String!
+    var longitude : String  {
         if _longitude == nil {
-            _longitude = -122.361176
+            _longitude = "-122.361176"
         }
         return _longitude
     }
@@ -48,12 +51,11 @@ class Weather {
         return _weatherURL
     }
     
-    init (weather: String) {
-        self._weather = weather
-        //self._latitude = latitude
-        //self._longitude = longitude
-        //_weatherURL = "\(BASE_URL)\(API_KEY)\(self._latitude),\(self._longitude)"
-        _weatherURL = "\(BASE_URL)\(API_KEY)47.621344,-122.361176"
+    init (latitude: String ,longitude: String) {
+        self._latitude = latitude
+        self._longitude = longitude
+        _weatherURL = "\(BASE_URL)\(API_KEY)\(self.latitude),\(self.longitude)"
+        //_weatherURL = "\(BASE_URL)\(API_KEY)\(_latitude),-122.361176"
     }
     
     
@@ -63,6 +65,7 @@ class Weather {
         Alamofire.request(.GET, url).responseJSON { response in
             let result = response.result
             print(result.value.debugDescription)
+            print("\(self.latitude),\(self.longitude)")
         }
     }
 }

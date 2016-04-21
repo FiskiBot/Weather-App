@@ -7,19 +7,9 @@
 //
 
 import Foundation
-import CoreLocation
 
-class Location : NSObject,CLLocationManagerDelegate{
-    
-    
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("location = \(locations)")
-    }
-    
-    
-    
-    
-    
+
+class Location{
+  
 }
 

@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import CoreLocation
 
-class MainVC: UIViewController, CLLocationManagerDelegate {
+
+class MainVC: UIViewController {
 
     @IBOutlet weak var weatherImg: UIImageView!
 
@@ -19,40 +19,34 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
     
     var weather : Weather!
 
-    var locManager = CLLocationManager()
-    
-    var currentLocation = CLLocation()
-    var lat: String = "47.620187"
-    var long : String = "-122.361176"
-    
     override func viewDidAppear(animated: Bool) {
         
-        weather = Weather(latitude: lat, longitude: long)
+        weather = Weather()
         weather.downloadWeatherDetails { () -> () in
+            
         }
+    }
+
+    
+    func updateUI(){
+        weatherImg.image = UIImage(named: weather.icon)
+        locationLbl.text = "\(weather.mainWeather)"
+        
+        fahrLbl.text = "\((weather.temp))°F"
+        var farh = round(Float(weather.temp)!)
+        var celc = round((farh - 32) * 5 / 9)
+        celcLbl.text = "\(celc)°C"
+        
         
     }
-    func locationAuthStatus(){
         
-        if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse{
-            
-            currentLocation = locManager.location!
-            lat = "\(currentLocation.coordinate.latitude)"
-            long = "\(currentLocation.coordinate.longitude)"
-            
-        } else {
-            locManager.requestWhenInUseAuthorization()
-        }
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationAuthStatus()
-        locManager.delegate = self
-        locManager.desiredAccuracy = kCLLocationAccuracyBest
-        locManager.startUpdatingLocation()
         
     }
 
+    @IBAction func getWeather(sender: AnyObject) {
+        updateUI()
+    }
 }
 

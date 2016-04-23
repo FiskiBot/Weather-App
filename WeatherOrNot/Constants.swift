@@ -9,8 +9,10 @@
 import Foundation
 
 
-let BASE_URL = "https://api.forecast.io/forecast/"
-let API_KEY = "48123ef09e027fe4d0dd1fc476a8859d/"
+let BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q="
+let SEATLLE = "Seattle"
+let IMPERIAL_UNITS = "units=imperial"
+let API_KEY = "APPID=1636b7bc68a4e607f7531309c857e09b"
 
 
 
